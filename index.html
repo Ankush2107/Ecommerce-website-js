@@ -3,14 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Modern Store</title>
 </head>
 <body>
-    <h1>Our products</h1>
-    <div id="container">
+    <header class="main-header">
+        <h1>Modern Store</h1>
+        <p>The best products, hand-picked for you.</p>
+    </header>
+    <main>
+        <!-- START: New Filter Section -->
+        <div class="filters-container">
+            <div class="filter-group">
+                <label for="category-filter">Category:</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <!-- Categories will be populated by JS -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="sort-filter">Sort by:</label>
+                <select id="sort-filter">
+                    <option value="default">Default</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="rating-desc">Rating: High to Low</option>
+                </select>
+            </div>
+        </div>
+        <!-- END: New Filter Section -->
 
-    </div>
+        <div id="container">
+            <!-- Products will be injected here by JavaScript -->
+        </div>
+    </main>
     <script src="./script.js"></script>
 </body>
 </html>
